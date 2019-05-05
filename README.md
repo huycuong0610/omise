@@ -5,6 +5,8 @@
 </p>
 <br />
 
+npm run start
+npm run server
 
 **Tamboon React** is a code challenge for frontend developer.
 
