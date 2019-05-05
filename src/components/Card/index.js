@@ -21,7 +21,6 @@ const Cards = ( props ) => {
     handlePayment,
     close,
     toogle,
-    keyOf,
     selectedAmount,
     showPaymentFunction,
     currency,

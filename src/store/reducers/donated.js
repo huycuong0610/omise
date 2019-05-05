@@ -9,22 +9,15 @@ const initState = {
   message: '',
 };
 
-const init = ( state, action ) => {
-  const data = {
-    error: null,
-  };
-  return {...state,...data};
-};
 
 const donated = (state, action) => {
-  let donations = state.donations && state.donations.replace(/\D/g,'');
-  let amount = action.amoun && action.amount.replace(/\D/g,'');
+  let donations = state.donations;
+  let amount = action.amount;
   let donated = parseInt(donations + amount)
   const data = {
     donations: donated,
   };
   return {...state,...data};
-
 };
 
 const showMessage = ( state, action ) => {
