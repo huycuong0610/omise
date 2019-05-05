@@ -3,7 +3,7 @@ import {
   DONATE_SUCCESS,
   UPDATE_MESSAGE
 } from '../actions/actionTypes';
-
+import { toast } from 'react-toastify';
 const initState = {
   donations: 0,
   message: '',
@@ -21,6 +21,7 @@ const donated = (state, action) => {
 };
 
 const showMessage = ( state, action ) => {
+  toast.success(action.message)
   return {...state,...{ message: action.message }};
 };
 

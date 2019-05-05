@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import fetch from 'isomorphic-fetch';
 import * as actions from '../../store/actions';
 import Card from '../../components/Card';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Messages,
   Container,
@@ -78,11 +79,11 @@ class Home extends Component {
         <h2>OMISE React</h2>
         <p>All donations: { this.props.donate }$</p>
         <Messages >
-          {this.props.message}
         </Messages>
         <Container>
           { cards }
         </Container>
+        <ToastContainer />
       </div>
     );
   }
